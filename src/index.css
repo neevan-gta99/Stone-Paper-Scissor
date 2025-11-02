@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .bg-body {
   position: relative;
   height: 100vh;
@@ -12,35 +14,53 @@
   padding: 0;
   overflow: hidden;
 }
+
 .permanent-marker-regular {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
 .bg-body::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/src/assets/back\ image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1; 
+  opacity: 0.1;
   z-index: -1;
   background-color: aquamarine;
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-20px); }
-  50% { transform: translateX(20px); }
-  75% { transform: translateX(-20px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-20px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  75% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .moving {
- display: block;
+  display: block;
   max-width: 100%;
   width: 35rem;
   height: 25rem;
@@ -50,6 +70,7 @@
   padding: 0;
   animation: shake 0.5s ease-in-out infinite;
 }
+
 .stop-moving {
   display: block;
   max-width: 100%;
@@ -61,25 +82,26 @@
   padding: 0;
 }
 
-.image-wrapper {
-  width: 100%;
-  height: 30%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 1.4rem;
-  border-top: 2px solid rgb(13, 10, 142);
-  border-bottom: 2px solid rgb(13, 10, 142);
-  background-color:  rgb(34 0 255 / 20%);
-}
-
 @keyframes shake-vertical {
-  0%   { transform: translateY(0); }
-  25%  { transform: translateY(-5px); }
-  50%  { transform: translateY(5px); }
-  75%  { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  75% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .shaked-vertical {
@@ -88,7 +110,7 @@
   animation-delay: 5s;
 }
 
-.main-div{
+.main-div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -97,93 +119,694 @@
   align-items: center;
 }
 
-.main-head{
+.main-head {
   margin-top: 3rem;
-  width: 100%;
+  width: inherit;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   font-family: "Permanent Marker", cursive;
 }
-.btns{
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* gap: 2rem; */
-  background-color: rgb(222, 184, 135,20%);
-}
-.controls{
-  width: 100%;
-  /* margin-top: -2rem; */
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* align-content: center; */
-  align-items: center;
-  gap: 1.7rem;
-}
-.main-btns{
-  /* margin-top: -2rem; */
-  width: 100%;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.game-btns{
-  width: inherit;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+
+/* XXL devices (very large screens, 1400px and up) */
+@media (min-width: 1400px) {
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 2.5rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+    font-weight: 500;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
 }
 
-.choose{
-  font-size: 2.5rem;
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 2.5rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+    font-weight: 500;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 2.1rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    font-weight: 400;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 2rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 1rem;
+    padding: 6px 10px;
+    font-weight: 400;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 1.6rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 0.5rem;
+    padding: 6px 10px;
+    font-weight: 300;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 1.6rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 0.5rem;
+    padding: 6px 10px;
+    font-weight: 300;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+  #stone1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #paper1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #scissor1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #stone2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #paper2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  #scissor2 {
+    width: 300px;
+    height: 300px;
+  }
+
+
+}
+
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+
+  .image-wrapper {
+    width: inherit;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    border-top: 2px solid rgb(13, 10, 142);
+    border-bottom: 2px solid rgb(13, 10, 142);
+    background-color: rgb(34 0 255 / 20%);
+  }
+
+  .btns {
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 184, 135, 20%);
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .main-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .game-btns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .choose {
+    font-size: 1.2rem;
+    color: #f75553;
+    font-weight: 700;
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+  }
+
+  .common-btns {
+    font-size: 0.4rem;
+    padding: 6px 10px;
+    font-weight: 300;
+    background-color: #f75553;
+    border: 1px solid #6a6ffd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .common-btns:hover {
+
+    background-color: #6a6ffd;
+    border: 1px solid #f75553;
+
+  }
+
+  #stone1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #paper1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #scissor1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #stone2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #paper2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  #scissor2 {
+    width: 200px;
+    height: 200px;
+  }
+
+
+}
+
+
+
+
+
+#rock {
   color: #f75553;
-  font-weight: 700;
-  font-family: "Indie Flower", cursive;
-  font-style: normal;
 }
-.common-btns{
-  font-size: 1.3rem;
-  padding: 6px 10px;
-  font-weight: 500;
-  background-color: #f75553;
-  border: 1px solid #6a6ffd;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  letter-spacing: 1px;
-  z-index: 10;
-  transition: all 0.7s ease-in-out;
-}
-.common-btns:hover{
 
-  background-color: #6a6ffd;
-  border: 1px solid #f75553;
-
-}
-#rock{
-  color: #f75553;
-}
-#paper{
+#paper {
   color: #6a6ffd;
 }
-#scissor{
+
+#scissor {
   color: #40b1f8;
 
 }
-.img-hide{
+
+.img-hide {
   display: none;
 }
-.btn-hide{
+
+.btn-hide {
   display: none;
 }
