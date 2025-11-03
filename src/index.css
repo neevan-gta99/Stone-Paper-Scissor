@@ -120,7 +120,7 @@
 }
 
 .main-head {
-  margin-top: 3rem;
+  margin-top: 5rem;
   width: inherit;
   display: flex;
   flex-direction: row;
@@ -677,7 +677,7 @@
 
   .image-wrapper {
     width: inherit;
-    height: 30%;
+    height: 20%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -725,7 +725,7 @@
   }
 
   .choose {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #f75553;
     font-weight: 700;
     font-family: "Indie Flower", cursive;
@@ -733,8 +733,8 @@
   }
 
   .common-btns {
-    font-size: 0.4rem;
-    padding: 6px 10px;
+    font-size: 0.9rem;
+    padding: 5px 8px;
     font-weight: 300;
     background-color: #f75553;
     border: 1px solid #6a6ffd;
