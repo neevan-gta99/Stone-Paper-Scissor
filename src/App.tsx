@@ -297,13 +297,13 @@ function App() {
         </div>
 
         <div className='image-wrapper'>
-          <img id="stone1" src="/src/assets/StoneImg.png" alt="" className="moving" />
-          <img id="paper1" src="/src/assets/PaperImg.png" alt="" className="stop-moving img-hide" />
-          <img id="scissor1" src="/src/assets/ScissorImg.png" alt="" className="stop-moving img-hide" />
+          <img id="stone1" src="assets/StoneImg.png" alt="" className="moving" />
+          <img id="paper1" src="assets/PaperImg.png" alt="" className="stop-moving img-hide" />
+          <img id="scissor1" src="assets/ScissorImg.png" alt="" className="stop-moving img-hide" />
 
-          <img id="stone2" src="/src/assets/StoneImg.png" alt="" className="moving" />
-          <img id="paper2" src="/src/assets/PaperImg.png" alt="" className="stop-moving img-hide" />
-          <img id="scissor2" src="/src/assets/ScissorImg.png" alt="" className="stop-moving img-hide" />
+          <img id="stone2" src="assets/StoneImg.png" alt="" className="moving" />
+          <img id="paper2" src="assets/PaperImg.png" alt="" className="stop-moving img-hide" />
+          <img id="scissor2" src="assets/ScissorImg.png" alt="" className="stop-moving img-hide" />
         </div>
 
 
