@@ -310,7 +310,7 @@ function App() {
           <div className='controls'>
             <h4 className='choose'>Choose Sign</h4>
             <div className='game-btns'>
-              <button disabled={isDisabled} className="game-btn common-btns" onClick={stoneBtn}>Stone</button>
+              <button disabled={isDisabled} className="game-btn common-btns" onClick={stoneBtn}>Rock</button>
               <button disabled={isDisabled} className="game-btn common-btns" onClick={paperBtn} >Paper</button>
               <button disabled={isDisabled} className="game-btn common-btns" onClick={scissorBtn} >Scissor</button>
             </div>
